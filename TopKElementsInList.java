@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.List;
 
 public class TopKElementsInList {
 
@@ -9,7 +8,8 @@ public class TopKElementsInList {
     // Space Complexity: O(n)
     public static int[] topKFrequent(int[] nums, int k) {
         HashMap<Integer, Integer> count = new HashMap<>();
-        List<Integer>[] freq = new List[nums.length + 1];
+        @SuppressWarnings("unchecked")
+        ArrayList<Integer>[] freq = new ArrayList[nums.length + 1];
 
         for (int i = 0; i < freq.length; i++) {
             freq[i] = new ArrayList<>();
